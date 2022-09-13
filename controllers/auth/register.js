@@ -27,7 +27,6 @@ const register = async (req, res) => {
     html: `<a href="http://localhost:3000/api/auth/verify/${verificationToken}" target="_blank">Нажмите для подтверждения email</a>`,
   };
   await sendEmail(mail);
-
   res.status(201).json({
     email: result.email,
   });
